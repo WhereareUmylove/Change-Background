@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 520px;
+				height: 520px;
+				border-radius: 50%;
+				background: cyan;
+				 background: -webkit-repeating-radial-gradient(cyan, chartreuse 10%, white 15%); 
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+
+		</div>
+	</body>
+	<script type="text/javascript">
+		var box = document.getElementById("box");
+
+		box.onmousemove = function() {
+			var x = parseInt(Math.random() * 100);
+			var y = parseInt(Math.random() * 100);
+			box.style.background = "-webkit-repeating-radial-gradient(cyan,chartreuse "+x+"%, white "+y+"%)";
+		}
+	</script>
+
+</html>
